@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/guypursey/diarise/issues"
   },
-  "homepage": "https://github.com/guypursey/diarise#readme"
+  "homepage": "https://github.com/guypursey/diarise#readme",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
 }
