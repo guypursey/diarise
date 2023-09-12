@@ -1,0 +1,24 @@
+{
+  "name": "diarise",
+  "version": "0.0.0",
+  "description": "Notation for those with less than perfect timing",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha ./spec/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guypursey/diarise.git"
+  },
+  "keywords": [
+    "date",
+    "time",
+    "plaintext"
+  ],
+  "author": "Guy Pursey <guypursey@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guypursey/diarise/issues"
+  },
+  "homepage": "https://github.com/guypursey/diarise#readme"
+}
