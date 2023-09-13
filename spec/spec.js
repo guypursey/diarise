@@ -21,13 +21,20 @@ describe("Checking ordering of plain-text dates", function () {
         }
     ];
     tests.forEach(({test, input, expected}) => {
-        it(test, function () {
-            const output = input.map(x => lookupDate(x))
-                .sort((x, y) => (x.val < y.val) ? -1 : ((x.val > y.val) ? 1 : 0))
-                .map(x => x.key);
-            //console.log(output);
-            output.should.have.ordered
-                .members(expected);
+        describe(test, function () {
+            const processedInput = input.map(x => lookupDate(x))
+            it("in ascending order", function () {
+                const output = processedInput
+                    .sort((x, y) => (x.val < y.val) ? -1 : ((x.val > y.val) ? 1 : 0))
+                    .map(x => x.key)
+                output.should.have.ordered.members(expected);
+            })
+            it("in descending order", function () {
+                const output = processedInput
+                    .sort((x, y) => (x.val < y.val) ? 1 : ((x.val > y.val) ? -1 : 0))
+                    .map(x => x.key);
+                output.should.have.ordered.members(expected.reverse());
+            })
         })
     })
 });
