@@ -27,9 +27,29 @@ lookupDate = key => ({
 describe("Checking ordering of plain-text dates", function () {
     const tests = [
         {
-            test: "with two simple days",
+            test: "where one day should follow another",
             input: [ "2nd January 2023", "1st January 2023" ],
             expected: [ "1st January 2023", "2nd January 2023" ]
+        },
+        {
+            test: "with a month representation and a day representation",
+            input: [ "1st January 2023", "January 2023" ],
+            expected: [ "January 2023", "1st January 2023" ]
+        },
+        {
+            test: "with a year-resoluton date and a month-resolution date",
+            input: [ "January 2023", "2023" ],
+            expected: [ "2023", "January 2023" ]
+        },
+        {
+            test: "with a decade-resolution date and three year-resolution dates straddling it",
+            input: [ "2020s (decade)", "2019", "2020", "2021" ],
+            expected: [ "2019", "2020s (decade)", "2020", "2021" ]
+        },
+        {
+            test: "with a century-resolution date and decade-resolution date",
+            input: [ "1900s (decade)", "1990s (century)" ],
+            expected: [ "1900s (century)", "1900s (decade)" ]
         }
     ];
     tests.forEach(({test, input, expected}) => {
