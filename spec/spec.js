@@ -2,9 +2,21 @@ const chai = require("chai").should();
 //const diarise = require("../src/index.js");
 
 testDictionary = {
-    "January 2023":     "202301",
-    "1st January 2023": "20230101",
-    "2nd January 2023": "20230102"
+    "21st century":             "21C",
+    "2020":                     "2020",
+    "2020s (decade)":           "2020s",
+    "2023":                     "2023",
+    "Winter or Q1 2023":        "2023Q1",
+    "January 2023":             "202301",
+    "1st January 2023":         "20230101",
+    "1st January 2023 + note":  "20230101: This is a note",
+    "Noon on 1st January 2023": "202301011200",
+    "2nd January 2023":         "20230102",
+    "March 2023":               "202303",
+    "Spring or Q2 2023":        "2023Q2",
+    "April 2023":               "202304",
+    "Summer or Q3 2023":        "2023Q3",
+    "June 2023":                "202306"
 };
 
 lookupDate = key => ({
