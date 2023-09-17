@@ -73,5 +73,6 @@ describe("Checking ordering of plain-text dates", function () {
 });
 
 describe("Checking conversion of plain-text to date objects", function () {
-
+    describe("does not work with usual JavaScript date object", function () {})
+    describe("works with Diarise functions", function () {})
 })
