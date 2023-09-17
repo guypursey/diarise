@@ -23,6 +23,7 @@ lookupDate = key => ({
         "key": key,
         "val": testDictionary[key]
     });
+    // TODO: add some error or undefined logging here, perhaps via monad
 
 describe("Checking ordering of plain-text dates", function () {
     const tests = [
