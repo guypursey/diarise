@@ -7,7 +7,12 @@ lookupDate = key => ({
         "key": key,
         "val": prop[key]
     });
-    // TODO: add some error or undefined logging here, perhaps via monad
+
+// TODO: add some error or undefined logging here, perhaps via monad, perhaps via explicit testing
+describe("Checking two-way coverage", function () {
+    describe("to see that all values in the tests are proposed", function () {})
+    describe("to see that all values in the proposal are tested", function () {})
+})
 
 describe("Checking ordering of plain-text dates", function () {
     // TODO: Try splitting out into separate suites (basic requirements, advanced requirements)
