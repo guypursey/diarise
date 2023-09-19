@@ -4,7 +4,8 @@
   "description": "Notation for those with less than perfect timing",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha ./spec/*.js"
+    "test": "mocha ./spec/*.js",
+    "coverage": "nyc npm run test"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/guypursey/diarise#readme",
   "devDependencies": {
     "chai": "^4.3.8",
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0"
   }
 }
