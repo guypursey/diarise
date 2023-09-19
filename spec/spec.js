@@ -1,6 +1,8 @@
 const chai = require("chai").should();
 //const diarise = require("../src/index.js");
 
+// TODO: Try splitting out into separate proposal/examples JSON file?
+// TODO: Check NYC coverage after split to see if coverage of JSON is also handled
 let testDictionary = {
     "1900s (century)":          "20C",
     "1900s (decade)":           "1900s",
@@ -30,6 +32,8 @@ lookupDate = key => ({
     // TODO: add some error or undefined logging here, perhaps via monad
 
 describe("Checking ordering of plain-text dates", function () {
+    // TODO: Try splitting out into separate suites (basic requirements, advanced requirements)
+    // TODO: Try splitting out into separate file for coverage purposes?
     const tests = [
         {
             test: "where one day should follow another",
