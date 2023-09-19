@@ -1,10 +1,14 @@
 const chai = require("chai").should();
 //const diarise = require("../src/index.js");
 
-testDictionary = {
+let testDictionary = {
+    "1900s (century)":          "20C",
+    "1900s (decade)":           "1900s",
     "21st century":             "21C",
+    "2019":                     "2019",
     "2020":                     "2020",
     "2020s (decade)":           "2020s",
+    "2021":                     "2021",
     "2023":                     "2023",
     "Winter or Q1 2023":        "2023Q1",
     "January 2023":             "202301",
