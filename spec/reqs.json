@@ -21,7 +21,7 @@
     },
     {
         "test": "with a century-resolution date and decade-resolution date",
-        "input": [ "1900s (decade)", "1990s (century)" ],
+        "input": [ "1900s (decade)", "1900s (century)" ],
         "expected": [ "1900s (century)", "1900s (decade)" ]
     }
 ]
