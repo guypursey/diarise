@@ -39,13 +39,13 @@ describe("Checking ordering of plain-text dates", function () {
             const processedInput = input.map(x => lookupDate(x))
             it("in ascending order", function () {
                 const output = processedInput
-                    .sort((x, y) => (x.val < y.val) ? -1 : ((x.val > y.val) ? 1 : 0))
+                    .sort((x, y) => x.val.localeCompare(y.name))
                     .map(x => x.key);
                 output.should.have.ordered.members(expected);
             });
             it("in descending order", function () {
                 const output = processedInput
-                    .sort((x, y) => (x.val < y.val) ? 1 : ((x.val > y.val) ? -1 : 0))
+                    .sort((x, y) => y.val.localeCompare(x.name))
                     .map(x => x.key);
                 output.should.have.ordered.members(expected.reverse());
             });
