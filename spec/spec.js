@@ -8,6 +8,8 @@ lookupDate = key => ({
         "val": prop[key]
     });
 
+// TODO: Add basic check of UTF8 ref file by randomising and resorting.
+
 describe("Checking two-way coverage", function () {
     let reqsSet = reqs.reduce((p, c) => {
         c.input.forEach(x => p.add(x));
