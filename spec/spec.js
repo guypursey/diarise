@@ -19,17 +19,17 @@ describe("Checking two-way coverage", function () {
         reqsSet.forEach(x => {
             it(`${x} proposal exists`, function() {
                 propSet.should.include(x);
-            })
-        })
-    })
+            });
+        });
+    });
     describe("to see that all values in the proposal are tested", function () {
         propSet.forEach(x => {
             it(`${x} is accounted for in test`, function () {
                 reqsSet.should.include(x);
-            })
-        })
-    })
-})
+            });
+        });
+    });
+});
 
 describe("Checking ordering of plain-text dates", function () {
     // TODO: Try splitting out into separate suites (basic requirements, advanced requirements)
@@ -40,17 +40,17 @@ describe("Checking ordering of plain-text dates", function () {
             it("in ascending order", function () {
                 const output = processedInput
                     .sort((x, y) => (x.val < y.val) ? -1 : ((x.val > y.val) ? 1 : 0))
-                    .map(x => x.key)
+                    .map(x => x.key);
                 output.should.have.ordered.members(expected);
-            })
+            });
             it("in descending order", function () {
                 const output = processedInput
                     .sort((x, y) => (x.val < y.val) ? 1 : ((x.val > y.val) ? -1 : 0))
                     .map(x => x.key);
                 output.should.have.ordered.members(expected.reverse());
-            })
-        })
-    })
+            });
+        });
+    });
 });
 
 describe("Checking conversion of plain-text to date objects", function () {
