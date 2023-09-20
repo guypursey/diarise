@@ -1,7 +1,6 @@
 {
     "1900s (century)": "20C",
     "1900s (decade)": "1900s",
-    "21st century": "21C",
     "2019": "2019",
     "2020": "2020",
     "2020s (decade)": "2020s",
@@ -12,6 +11,7 @@
     "1st January 2023": "20230101",
     "1st January 2023 + note": "20230101: This is a note",
     "Noon on 1st January 2023": "202301011200",
+    "1pm on 1st January 2023": "202301011300",
     "2nd January 2023": "20230102",
     "March 2023": "202303",
     "Spring or Q2 2023": "2023Q2",
