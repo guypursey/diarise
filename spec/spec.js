@@ -8,10 +8,27 @@ lookupDate = key => ({
         "val": prop[key]
     });
 
-// TODO: add some error or undefined logging here, perhaps via monad, perhaps via explicit testing
 describe("Checking two-way coverage", function () {
-    describe("to see that all values in the tests are proposed", function () {})
-    describe("to see that all values in the proposal are tested", function () {})
+    let reqsSet = reqs.reduce((p, c) => {
+        c.input.forEach(x => p.add(x));
+        c.expected.forEach(x => p.add(x));
+        return p;
+    }, new Set());
+    let propSet = new Set(Object.keys(prop));
+    describe("to see that all values in the tests are proposed", function () {
+        reqsSet.forEach(x => {
+            it(`${x} proposal exists`, function() {
+                propSet.should.include(x);
+            })
+        })
+    })
+    describe("to see that all values in the proposal are tested", function () {
+        propSet.forEach(x => {
+            it(`${x} is accounted for in test`, function () {
+                reqsSet.should.include(x);
+            })
+        })
+    })
 })
 
 describe("Checking ordering of plain-text dates", function () {
