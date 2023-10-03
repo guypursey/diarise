@@ -1,6 +1,7 @@
 const prop = require("./prop.json");
 const reqs = require("./reqs.json");
 // TODO: Check NYC coverage after split to see if coverage of JSON is also handled
+// TODO: Organise requirements into sections?
 
 const chai = require("chai").should();
 lookupDate = key => ({
@@ -10,6 +11,7 @@ lookupDate = key => ({
 
 // TODO: Add basic check of UTF8 ref file by randomising and resorting.
 
+// TODO: Separate two-way coverage out so it can be run as a standalone test as well as part of the suite.
 describe("Checking two-way coverage", function () {
     let reqsSet = reqs.reduce((p, c) => {
         c.input.forEach(x => p.add(x));
