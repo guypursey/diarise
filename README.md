@@ -22,17 +22,29 @@ Conversion and sorting of dates cross many tools is inconsistent and unintuitive
 
 <details>
 <summary>Example: Google Sheets</summary>
-Let's say that you have a set of dates and times that you want to put in order.
+Let's say that you have a list of dates and times that you want to put in order.
 
-If you have complete dates and you put them into a spreadsheet (say Google Sheets), the tool will generally convert them into a special date-time format for you. You can even format them to appear as you need them to.
+If you have complete dates and you put them into a spreadsheet (say Google Sheets), the tool will generally convert them into a special date-time format for you.
+
+You can even format them to appear as you need them to.
+
+![By going to "Format" in the menu, and then "Number" you can choose from preset or custom date formats.](./img/example-google-sheets-date-format-change.gif)
 
 But if there is any uncertainty around your date, you may become stuck.
 
-Let's say you know that something happened in May 2022 but you don't know when.
+Let's say you know about an event in May 2023 but you don't know when.
 
-Google Sheets will helpfully interpret that as 1st May 2022 for you but continue to display it without the day. But the uncertainty itself is lost. And if you format the entire column in the same way, you lose the formatting and the more general vagueness you were trying to express with your date.
+So you type `2023/05`.
 
-Likewise if you know something happened in 2023 and put that in your column and sort, you'll find it's put in above the original. (and if you format the whole column you'll see the date it has stored is actually 14th July 1905).
+Google Sheets will interpret that as 1st May 2022 for you. It will still sort okay, after April 2023 but before more specific dates in May 2023. And it will continue to display `2023/05`.
+
+But the uncertainty itself is easily lost. If you format the entire column in the same way, you lose the formatting and the more general vagueness you were trying to express with your date.
+
+![You can see the specific date Google Sheets has inferred from in the formula bar, by opening the calendar view in the actual cell, and by changing the format for the cell or the entire column.](./img/example-google-sheets-less-specific-date.gif)
+
+And if you mark the date with something outside the date conventions that Google can't interpret then it will be treated differently to the rest of the column and then won't sort intuitively.
+
+Likewise if you know of an event in 2023 and put that in your column and sort, you'll find it's put in above the original. (and if you format the whole column you'll see the date it has stored is actually 14th July 1905).
 </details>
 
 One aim of this project is to come up with a set of conventions that allow you to record a date up to a required level of specificity and still be able to sort it meaningfully.
@@ -40,7 +52,9 @@ One aim of this project is to come up with a set of conventions that allow you t
 
 ## 2. Helper functions
 
-It should be possible to convert a plain-text date into a standard JavaScript date object if needed, or into other formats. There might even be custom formats that preserve the uncertainty while still provided a cross-compatible date object amongst the properties, that can then be used in graphing and data visualisation.
+It should be possible to convert a plain-text date into a standard JavaScript date object if needed, or into other formats.
+
+There might even be custom formats that preserve the uncertainty while still provided a cross-compatible date object amongst the properties, that can then be used in graphing and data visualisation.
 
 ## 3. Calendar grammar
 
