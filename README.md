@@ -21,7 +21,7 @@ Diarise has three main aims:
 Conversion and sorting of dates cross many tools is inconsistent and unintuitive.
 
 > <details>
-> <summary>Example: Google Sheets</summary>
+> <summary>Problem example: Google Sheets</summary>
 >
 > Let's say that you have a list of dates that you want to put in order.
 >
@@ -59,7 +59,7 @@ One aim of this project is to come up with a set of conventions that allow you t
 
 It should be possible to convert a plain-text date into a standard JavaScript date object if needed, or into other formats.
 
-There might even be custom formats that preserve the uncertainty while still provided a cross-compatible date object amongst the properties, that can then be used in graphing and data visualisation.
+Custom formats that preserve the uncertainty, providing a cross-compatible date object  with other properties, could be used in graphing and data visualisation.
 
 ### 3. Calendar grammar
 
