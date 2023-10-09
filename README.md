@@ -23,29 +23,31 @@ Conversion and sorting of dates cross many tools is inconsistent and unintuitive
 > <details>
 > <summary>Example: Google Sheets</summary>
 >
-> Let's say that you have a list of dates and times that you want to put in order.
+> Let's say that you have a list of dates that you want to put in order.
 >
-> If you have complete dates and you put them into a spreadsheet (say Google Sheets), the tool will generally convert them into a special date-time format for you.
+> Put them into a spreadsheet (like Google Sheets) and the tool will convert them into a special date format.
 >
-> You can even format them to appear as you need them to.
+> You can then even change the format of these dates at the click of a button.
 >
 > ![By going to "Format" in the menu, and then "Number" you can choose from preset or custom date formats.](./img/example-google-sheets-date-format-change.gif)
 >
-> But if there is any uncertainty around your date, you may become stuck.
+> But if there's any uncertainty around your date, you may become stuck.
 >
-> Let's say you know about an event in May 2023 but you don't know when.
+> Let's say you know about an event in May 2023 but you don't know when. So you type `2023/05`.
 >
-> So you type `2023/05`.
+> Google Sheets will interpret that as 1st May 2022 for you. It will continue to display `2023/05` but it's easy to lose the fact that you didn't know the actual day.
 >
-> Google Sheets will interpret that as 1st May 2022 for you. It will continue to display `2023/05` but the uncertainty itself is easily lost. If you format the entire column in the same way, you lose the formatting and the more general vagueness you were trying to express with your date.
+> And if you format that cell to match others in your column, you'll lose the vagueness you were trying to express.
 >
 > ![You can see the specific date Google Sheets has inferred from in the formula bar, by opening the calendar view in the actual cell, and by changing the format for the cell or the entire column.](./img/example-google-sheets-less-specific-date.gif)
 >
-> While, because of this, your date will still sort okay (after April 2023 but before more specific dates in May 2023), you might trick yourself into thinking you have something more exact than you do. And, if you mark the date with something outside the date conventions that Google Sheets understands, then "date" won't be treated as a date at all. It will fall outside the usual sorting, which means you can't see at glance roughly where it should fall in the list of events.
+> n this case, your date will still sort okay -- after April 2023 but before more specific dates in May 2023. But you might  trick yourself into thinking you have something more exact than you had to start with.
+>
+> And if you mark the date with a question mark, Google Sheets won't understand and won't treat it as a date at all. Then your date will fall outside the usual sorting order. You won't be able to see at a glance where it should be in the list of more specific dates you have.
 >
 > ![Using a question mark in place of the day part of the date will set your information apart and mean it can't be sorted in the same way as your known dates.](./img/example-google-sheets-sort-and-mark-unspecific-date.gif)
 >
-> Likewise if you know of an event in 2023 but don't even know which month it's in and put that in your column, you won't be able to sort it between dates in surrounding years. And if you format it like the rest of the column, you'll be in for a surprise...
+> It gets worse... If you know of an event in 2023 but don't even know which month it's in then watch out. Put that in your column and you won't be able to sort it between dates in surrounding years. And if you format it like the rest of the column, you'll be in for a surprise...
 >
 > ![2023 formatted as a date in Google Sheets becomes 15th July 1905.](./img/example-google-sheets-year-sorting-and-formatting.gif)
 > </details>
