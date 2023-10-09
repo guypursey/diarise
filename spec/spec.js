@@ -9,32 +9,6 @@ lookupDate = key => ({
         "val": prop[key]
     });
 
-// TODO: Add basic check of UTF8 ref file by randomising and resorting.
-
-// TODO: Separate two-way coverage out so it can be run as a standalone test as well as part of the suite.
-describe("Checking two-way coverage", function () {
-    let reqsSet = reqs.reduce((p, c) => {
-        c.input.forEach(x => p.add(x));
-        c.expected.forEach(x => p.add(x));
-        return p;
-    }, new Set());
-    let propSet = new Set(Object.keys(prop));
-    describe("to see that all values in the tests are proposed", function () {
-        reqsSet.forEach(x => {
-            it(`${x} proposal exists`, function() {
-                propSet.should.include(x);
-            });
-        });
-    });
-    describe("to see that all values in the proposal are tested", function () {
-        propSet.forEach(x => {
-            it(`${x} is accounted for in test`, function () {
-                reqsSet.should.include(x);
-            });
-        });
-    });
-});
-
 describe("Checking ordering of plain-text dates", function () {
     // TODO: Try splitting out into separate suites (basic requirements, advanced requirements)
     const tests = reqs;

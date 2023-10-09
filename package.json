@@ -4,8 +4,9 @@
   "description": "Notation for those with less than perfect timing",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha ./spec/*.js",
-    "coverage": "nyc npm run test"
+    "coverage": "mocha ./spec/cvrg.js",
+    "nyc": "nyc npm run test",
+    "test": "mocha ./spec/*.js"
   },
   "repository": {
     "type": "git",
