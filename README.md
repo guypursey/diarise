@@ -41,7 +41,7 @@ Conversion and sorting of dates cross many tools is inconsistent and unintuitive
 >
 > ![You can see the specific date Google Sheets has inferred from in the formula bar, by opening the calendar view in the actual cell, and by changing the format for the cell or the entire column.](./img/example-google-sheets-less-specific-date.gif)
 >
-> n this case, your date will still sort okay -- after April 2023 but before more specific dates in May 2023. But you might  trick yourself into thinking you have something more exact than you had to start with.
+> In this case, your date will still sort okay -- after April 2023 but before more specific dates in May 2023. But you might  trick yourself into thinking you have something more exact than you had to start with.
 >
 > And if you mark the date with a question mark, Google Sheets won't understand and won't treat it as a date at all. Then your date will fall outside the usual sorting order. You won't be able to see at a glance where it should be in the list of more specific dates you have.
 >
