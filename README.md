@@ -6,13 +6,13 @@ Getting dates in order, for those with imperfect timing
 
 Diarise has three main aims:
 
- 1. **Plain-text date- and time- stamps**: Devise a plain-text notation and functions for handling dates and times, such that:
+ 1. [**Plain-text date- and time- stamps**](#1-plain-text-date--and-time-stamps): Devise a plain-text notation and functions for handling dates and times, such that:
      - We can use it to express uncertainty about dates and times
      - Lexical order = chronological order
- 2. **Helper functions**: Create helper functions that:
+ 2. [**Helper functions**](#2-helper-functions): Create helper functions that:
      - Automate homogenisation of dates and times where needed making plain-text transcription easier
      - Convert plain text to special types or classes of object and back again
- 3. **Calendar grammar**: Enable a calendar grammar so that:
+ 3. [**Calendar grammar**](#3-calendar-grammar): Enable a calendar grammar so that:
      - The conventions and functions created are clearly documented
      - We can easily devise similar conventions for alternative or fantasy calendars, to equip historians or empower creators or fans of fiction
 
